@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Manipulating URLs to access hidden files",
+        "category": "Web"
+    },
+    {
+        "name": "How to use cookies to spoof a website",
+        "category": "Web"
+    },
+    {
+        "name": "Cookies and local storage",
+        "category": "Web"
+    },
+    {
+        "name": "Cross site scripting",
+        "category": "Web"
+    },
+    {
+        "name": "Command injection",
+        "category": "Web"
+    },
+    {
+        "name": "SQL",
+        "category": "Web"
+    },
+    {
+        "name": "Web scraping",
+        "category": "Web"
+    },
+    {
+        "name": "JavaScript and PHP",
+        "category": "Web"
+    },
+    {
+        "name": "Encryption vs Encoding",
+        "category": "Cryptography"
+    },
+    {
+        "name": "Ciphers (substitution, caesar, ROT, arnold, atbash, etc)",
+        "category": "Cryptography"
+    },
+    {
+        "name": "Hashing and tools",
+        "category": "Cryptography"
+    },
+    {
+        "name": "ASCII, Hex, QR codes and barcodes, Morse Code, Base64/32, UTF-8",
+        "category": "Cryptography"
+    },
+    {
+        "name": "Terminal commands (cat, ls, whoami, cd, running programs, ssh, netcat, bash scripting)",
+        "category": "Linux"
+    },
+    {
+        "name": "Linux distributions and VMs",
+        "category": "Linux"
+    },
+    {
+        "name": "Binary (buffer overflows, bugs, memory)",
+        "category": "Linux"
+    },
+    {
+        "name": "Bash scripting",
+        "category": "Linux"
+    },
+    {
+        "name": "TCP & UDP",
+        "category": "Linux"
+    },
+    {
+        "name": "Python",
+        "category": "Tools"
+    },
+    {
+        "name": "Wireshark",
+        "category": "Tools"
+    },
+    {
+        "name": "Netcat",
+        "category": "Tools"
+    }
+]
