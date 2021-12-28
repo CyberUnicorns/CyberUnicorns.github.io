@@ -1,5 +1,4 @@
 import { Box, Img, Heading, Container, Grid, GridItem } from '@chakra-ui/react'
-import TypeIt from "typeit-react";
 
 export function Landing() {
     return (
@@ -8,21 +7,9 @@ export function Landing() {
             <Container maxW="container.xl">
                 <Grid templateColumns='repeat(2, 1fr)' align="center">
                     <GridItem colSpan={1} my="auto">
-                        <TypeIt
-                            options={{
-                                cursor: false,
-                                speed: 75,
-                                afterComplete: async () => {
-                                    // Will fire after the entire instance has completed typing.
-                                    // NOTE: If "loop" is enabled, this will never fire.
-                                    console.log('done');
-                                    // document.getElementById("wait").classList.add("visible");
-                                },
-                            }}>
-                            <Heading as="h1" fontSize={{ base: "3xl", md: "5xl", lg: "7xl" }} color="gray.300">Welcome to the </Heading>
-                            <Heading as="h1" fontSize={{ base: "3xl", md: "5xl", lg: "7xl" }} color="white" d="inline">Cyber</Heading>
-                            <Heading as="h1" fontSize={{ base: "3xl", md: "5xl", lg: "7xl" }} color="blue.200" d="inline">Unicorns</Heading>
-                        </TypeIt>
+                        <Heading as="h1" fontSize={{ base: "3xl", md: "5xl", lg: "7xl" }} color="gray.300">Welcome to the </Heading>
+                        <Heading as="h1" fontSize={{ base: "3xl", md: "5xl", lg: "7xl" }} color="white" d="inline">Cyber</Heading>
+                        <Heading as="h1" fontSize={{ base: "3xl", md: "5xl", lg: "7xl" }} color="blue.200" d="inline">Unicorns</Heading>
                     </GridItem>
                     <GridItem colSpan={1}>
                         <Img src="/logo.png" maxW="30vw"></Img>

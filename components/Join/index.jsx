@@ -21,7 +21,7 @@ export function Join() {
                     <Box align="center" bg="white" p={8} boxShadow="xl" rounded="md" maxW="500px" mx="auto" mt="4">
                         <Numbered number="1">Fill out the <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdbwMFp5wgEvTBW75CwoPy9aCblNMQQsjjVm6yzGxV9WfXbUg/viewform?usp=sf_link" color="blue.300" isExternal>member information form</Link></Numbered>
                         <Numbered number="2">Come to one of our meetings!</Numbered>
-                        <Numbered number="3">Join our <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdbwMFp5wgEvTBW75CwoPy9aCblNMQQsjjVm6yzGxV9WfXbUg/viewform?usp=sf_link" color="blue.300" isExternal>Facebook Group</Link></Numbered>
+                        <Numbered number="3">Join our <Link href="https://www.facebook.com/groups/1331698317252357/" color="blue.300" isExternal>Facebook Group</Link></Numbered>
                         <Text fontWeight="bold" fontSize="3xl" color="orange.400">Tuesdays @ 99:99 PM</Text>
                         <Text fontWeight="bold" fontSize="3xl" color="blue.700">Room: Watts 111</Text>
 
