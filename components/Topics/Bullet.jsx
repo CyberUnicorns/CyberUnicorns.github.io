@@ -1,7 +1,7 @@
 import { CheckIcon } from '@chakra-ui/icons'
 import { Text, Box } from '@chakra-ui/react'
 
-export function Bullet({ children, color }) {
+export function Bullet({ children = "", color = "" }) {
     return (
         <Box boxShadow='lg' bg="white" p={2} borderRadius="5px" d="flex" _hover={{ bg: "gray.100" }
         }>
