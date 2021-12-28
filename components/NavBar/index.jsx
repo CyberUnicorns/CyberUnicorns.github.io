@@ -7,7 +7,7 @@ export function NavBar() {
 
                 <Img src="/logo.png" maxW="60px"></Img>
                 <Box alignSelf="center">
-                    <Heading as='h1' size="lg" d="inline">Cyber </Heading>
+                    <Heading as='h1' size="lg" d="inline">Cyber</Heading>
                     <Heading as='h1' size="lg" d="inline" color="blue.300" fontWeight="bolder">Unicorns</Heading>
                 </Box>
 

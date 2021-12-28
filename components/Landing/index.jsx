@@ -19,8 +19,9 @@ export function Landing() {
                                     // document.getElementById("wait").classList.add("visible");
                                 },
                             }}>
-                            <Heading as="h1" fontSize={{ base: "3xl", md: "5xl", lg: "6xl" }} color="gray.300">Welcome to the </Heading>
-                            <Heading as="h1" fontSize={{ base: "3xl", md: "5xl", lg: "6xl" }} color="blue.200">CyberUnicorns</Heading>
+                            <Heading as="h1" fontSize={{ base: "3xl", md: "5xl", lg: "7xl" }} color="gray.300">Welcome to the </Heading>
+                            <Heading as="h1" fontSize={{ base: "3xl", md: "5xl", lg: "7xl" }} color="white" d="inline">Cyber</Heading>
+                            <Heading as="h1" fontSize={{ base: "3xl", md: "5xl", lg: "7xl" }} color="blue.200" d="inline">Unicorns</Heading>
                         </TypeIt>
                     </GridItem>
                     <GridItem colSpan={1}>

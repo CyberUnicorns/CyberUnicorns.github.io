@@ -5,6 +5,8 @@ import { Benefits } from "../components/Benefits"
 import { Topics } from "../components/Topics"
 import { Join } from "../components/Join"
 import { Footer } from "../components/Footer"
+import Fade from 'react-reveal/Fade'
+import { Box } from '@chakra-ui/react'
 
 export default function Home() {
   return (
@@ -14,10 +16,16 @@ export default function Home() {
       </Head>
       <NavBar />
       <Landing />
-      <Join />
-      <Benefits />
-      <Topics />
-      <Footer />
+      <Box bg="gray.100">
+        <Fade>
+
+          <Benefits />
+          <Join />
+          <Topics />
+          <Footer />
+
+        </Fade>
+      </Box>
 
     </>
   )

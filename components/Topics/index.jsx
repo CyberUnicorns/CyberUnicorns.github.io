@@ -13,7 +13,7 @@ export function Topics() {
     return (
         <Box bg='gray.100' p={5} color='gray.800'>
             <Container maxW="container.xl">
-                <Heading as='h1' fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }} color="gray.700" fontWeight="bolder" textAlign="center">Topics We Cover</Heading>
+                <Heading as='h1' fontSize={{ base: "2xl", md: "3xl", lg: "5xl" }} color="blue.700" fontWeight="bolder" textAlign="center">Topics we Cover</Heading>
 
 
                 {uniqueCategories.map((category, index) => {
