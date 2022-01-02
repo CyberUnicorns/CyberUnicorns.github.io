@@ -3,7 +3,7 @@ import { Box, Img, Heading, Container, Grid, GridItem } from '@chakra-ui/react'
 export function Landing() {
     return (
         <Box bgImage="url('/cover.jpg')" bgSize="cover" bgPosition="center"
-            bgRepeat="no-repeat" w='100%' h="80%" p={4} color='gray.800' >
+            bgRepeat="no-repeat" w='100%' h="80%" p={4} color='gray.800' mt="0">
             <Container maxW="container.xl">
                 <Grid templateColumns='repeat(2, 1fr)' align="center">
                     <GridItem colSpan={1} my="auto">
