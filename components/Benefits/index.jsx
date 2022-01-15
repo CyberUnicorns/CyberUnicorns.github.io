@@ -5,6 +5,10 @@ export function Benefits() {
     return (
         <Box bg='gray.100' p={4} color='gray.800' pt="6">
             <Container maxW="container.xl">
+                <Heading as='h1' fontSize={{ base: "2xl", md: "3xl", lg: "5xl" }} color="blue.700" fontWeight="bolder" textAlign="center">Updates:</Heading>
+                <Box maxW="700px" mx="auto" p={4} boxShadow="lg" bg="white" rounded="lg" mb="8">
+                    <Text>Check out the interest meeting video to learn more! <Link href="https://drive.google.com/file/d/1o689wBy_3OJf6ECBHViUpOQT1tHeVWAF/view" color = "blue.400" isExternal>Click here for Video.</Link></Text>
+                </Box>
                 <Heading as='h1' fontSize={{ base: "2xl", md: "3xl", lg: "5xl" }} color="blue.700" fontWeight="bolder" textAlign="center">Our Activities</Heading>
                 <Box maxW="700px" mx="auto" p={4} boxShadow="lg" bg="white" rounded="lg" mb="8">
                     <Text>CyberUnicorns is a student-led club at NCSSM dedicated to cybersecurity and it&apos;s opportunities. CyberUnicorns strives to engage the NCSSM community with cybersecurity through education, capture the flag challenges, possible scholarships. By teaching others about cybersecurity, we hope to inform them about the various tactics of hackers and how they can keep their own websites and even themselves safe. Scroll down to join us!</Text>
