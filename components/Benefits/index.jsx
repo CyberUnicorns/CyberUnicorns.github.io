@@ -14,70 +14,97 @@ export function Benefits() {
   return (
     <Box bg="gray.100" p={4} color="gray.800" pt="6">
       <Container maxW="container.xl">
-        <Heading
-          as="h1"
-          fontSize={{ base: "2xl", md: "3xl", lg: "5xl" }}
-          color="blue.700"
-          fontWeight="bolder"
-          textAlign="center"
-        >
-          Our Activities
-        </Heading>
-        <Box
-          maxW="700px"
-          mx="auto"
-          p={4}
-          boxShadow="lg"
-          bg="white"
-          rounded="lg"
-          mb="8"
-        >
-          <Text>
-            CyberUnicorns is a student-led club at NCSSM dedicated to
-            cybersecurity and it&apos;s opportunities. CyberUnicorns strives to
-            engage the NCSSM community with cybersecurity through education,
-            capture the flag challenges, possible scholarships. By teaching
-            others about cybersecurity, we hope to inform them about the various
-            tactics of hackers and how they can keep their own websites and even
-            themselves safe. Scroll down to join us!
-          </Text>
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+          <Box>
+            <Heading
+              as="h1"
+              fontSize={{ base: "2xl", md: "3xl", lg: "5xl" }}
+              color="blue.700"
+              fontWeight="bolder"
+              textAlign="center"
+            >
+              Our Activities
+            </Heading>
+            <Box
+              maxW="700px"
+              mx="auto"
+              p={4}
+              boxShadow="lg"
+              bg="white"
+              rounded="lg"
+              mb="8"
+            >
+              <Text>
+                CyberUnicorns is a student-led club at NCSSM dedicated to
+                cybersecurity and it&apos;s opportunities. CyberUnicorns strives
+                to engage the NCSSM community with cybersecurity through
+                education, capture the flag challenges, possible scholarships.
+                By teaching others about cybersecurity, we hope to inform them
+                about the various tactics of hackers and how they can keep their
+                own websites and even themselves safe. Scroll down to join us!
+              </Text>
 
-          <Text fontWeight="bold" mt={4}>
-            Here are some of our recent activities!
-          </Text>
+              <Text fontWeight="bold" mt={4}>
+                Here are some of our recent activities!
+              </Text>
 
-          <UnorderedList>
-            <ListItem>
-              <Link
-                href="https://github.com/CyberUnicorns/Intro-CTF-Challenges-2023"
-                color="blue.300"
-                isExternal
-              >
-                Intro to CTF challenges 2023 (8 challenges)
-              </Link>
-            </ListItem>
+              <UnorderedList>
+                <ListItem>
+                  <Link
+                    href="https://github.com/CyberUnicorns/Intro-CTF-Challenges-2023"
+                    color="blue.300"
+                    isExternal
+                  >
+                    Intro to CTF challenges 2023 (8 challenges)
+                  </Link>
+                </ListItem>
 
-            <ListItem>
-              <Link
-                href="https://github.com/CyberUnicorns/Intro-CTF-Challenges"
-                color="blue.300"
-                isExternal
-              >
-                Intro to CTF challenges 2022 (5 challenges)
-              </Link>
-            </ListItem>
+                <ListItem>
+                  <Link
+                    href="https://github.com/CyberUnicorns/Intro-CTF-Challenges"
+                    color="blue.300"
+                    isExternal
+                  >
+                    Intro to CTF challenges 2022 (5 challenges)
+                  </Link>
+                </ListItem>
 
-            <ListItem>
-              <Link
-                href="https://github.com/CyberUnicorns/Curriculum"
-                color="blue.300"
-                isExternal
-              >
-                CyberUnicorns Curriculum!
-              </Link>
-            </ListItem>
-          </UnorderedList>
-        </Box>
+                <ListItem>
+                  <Link
+                    href="https://github.com/CyberUnicorns/Curriculum"
+                    color="blue.300"
+                    isExternal
+                  >
+                    CyberUnicorns Curriculum!
+                  </Link>
+                </ListItem>
+              </UnorderedList>
+            </Box>
+          </Box>
+
+          <Box textAlign="center">
+            <Heading
+              as="h1"
+              fontSize={{ base: "2xl", md: "3xl", lg: "5xl" }}
+              color="blue.700"
+              fontWeight="bolder"
+              textAlign="center"
+            >
+              Our Calendar
+            </Heading>
+
+            <Box d="flex" justifyContent="center">
+              <iframe
+                src="https://calendar.google.com/calendar/embed?src=c_7d2724885598c2ae7e4cdd1353c7091e5476d093344b26ceaa259ba40ef78189%40group.calendar.google.com&ctz=America%2FNew_York&mode=AGENDA"
+                width="800"
+                height="400"
+                frameBorder="0"
+                scrolling="no"
+              ></iframe>
+            </Box>
+          </Box>
+        </SimpleGrid>
+
         <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing="30px" mt="4">
           <Card
             title="Learn Cybersecurity"
