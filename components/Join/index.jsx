@@ -74,10 +74,10 @@ export function Join() {
               </Link>
             </Numbered>
             <Text fontWeight="bold" fontSize="3xl" color="orange.400">
-              Thursdays @ 9-9:40 PM
+              Thursdays @ 8:40 - 9:20 PM
             </Text>
             <Text fontWeight="bold" fontSize="3xl" color="blue.700">
-              Room: Hill 10
+              Room: Engineering Suite
             </Text>
           </Box>
         </SimpleGrid>
