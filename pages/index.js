@@ -13,7 +13,6 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react'
-import { motion } from 'framer-motion'
 
 // these links are the only confirmed external paths in the repo and brief.
 const joinLinks = {
@@ -162,21 +161,9 @@ const pathways = [
   },
 ]
 
-const heroTransition = { duration: 0.7, ease: [0.2, 0.9, 0.2, 1] }
-const sectionTransition = { duration: 0.55, ease: [0.2, 0.9, 0.2, 1] }
-
-// this keeps section motion consistent without repeating the same wrapper logic.
+// keep sections visible in the static export instead of relying on js motion.
 function RevealBlock({ children, delay = 0 }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 28 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ ...sectionTransition, delay }}
-    >
-      {children}
-    </motion.div>
-  )
+  return <Box transition="opacity 160ms ease" transitionDelay={`${delay}s`}>{children}</Box>
 }
 
 // this groups each topic lane in a clean box instead of another dashboard card.
@@ -254,16 +241,10 @@ export default function Home() {
             bgPosition="center"
             transform="scale(1.03)"
           />
-          <motion.div
-            initial={{ opacity: 0.4, scale: 1.06 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.6, ease: [0.2, 0.9, 0.2, 1] }}
-            style={{
-              position: 'absolute',
-              inset: 0,
-              background:
-                'linear-gradient(120deg, rgba(12, 10, 8, 0.96) 0%, rgba(12, 10, 8, 0.82) 48%, rgba(12, 10, 8, 0.94) 100%)',
-            }}
+          <Box
+            position="absolute"
+            inset="0"
+            bgGradient="linear(120deg, rgba(12, 10, 8, 0.96) 0%, rgba(12, 10, 8, 0.82) 48%, rgba(12, 10, 8, 0.94) 100%)"
           />
 
           <Container
@@ -308,11 +289,7 @@ export default function Home() {
               py={{ base: 12, md: 16 }}
               templateColumns={{ base: '1fr', lg: 'minmax(0, 1.3fr) minmax(320px, 0.7fr)' }}
             >
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={heroTransition}
-              >
+              <Box>
                 <Stack spacing={6} maxW="2xl">
                   <Text fontSize={{ base: 'lg', md: 'xl' }} color="sand.300">
                     Hi @everyone! want to learn cybersecurity AND actually use
@@ -379,13 +356,9 @@ export default function Home() {
                     <Text>leadership welcome</Text>
                   </Flex>
                 </Stack>
-              </motion.div>
+              </Box>
 
-              <motion.div
-                initial={{ opacity: 0, y: 52 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ ...heroTransition, delay: 0.15 }}
-              >
+              <Box>
                 <Stack
                   spacing={6}
                   pl={{ lg: 8 }}
@@ -429,7 +402,7 @@ export default function Home() {
                     </Text>
                   </Box>
                 </Stack>
-              </motion.div>
+              </Box>
             </Grid>
           </Container>
         </Box>
@@ -532,50 +505,47 @@ export default function Home() {
                 gap={{ base: 10, lg: 14 }}
                 templateColumns={{ base: '1fr', xl: 'minmax(0, 0.95fr) minmax(0, 1.05fr)' }}
               >
-                <motion.div
-                  whileHover={{ boxShadow: '0 18px 45px rgba(0, 0, 0, 0.22)' }}
-                  transition={{ duration: 0.25, ease: 'easeOut' }}
+                <Box
+                  border="1px solid"
+                  borderColor="rgba(214, 164, 93, 0.42)"
+                  bg="coal.900"
+                  rounded="sm"
+                  overflow="hidden"
+                  h="full"
+                  transition="box-shadow 160ms ease, transform 160ms ease"
+                  _hover={{ boxShadow: '0 18px 45px rgba(0, 0, 0, 0.22)', transform: 'translateY(-2px)' }}
                 >
-                  <Box
-                    border="1px solid"
-                    borderColor="rgba(214, 164, 93, 0.42)"
-                    bg="coal.900"
-                    rounded="sm"
-                    overflow="hidden"
-                    h="full"
-                  >
-                    {/* this is the one card the user asked us to keep. */}
-                    <Image
-                      src="/pico.png"
-                      alt="picoCTF"
-                      objectFit="cover"
-                      h={{ base: '220px', md: '280px' }}
-                      w="full"
-                    />
-                    <Box p={{ base: 5, md: 6 }}>
-                      <Flex justify="space-between" gap={4} align="baseline" mb={4}>
-                        <Heading as="h2" fontSize={{ base: '3xl', md: '4xl' }}>
-                          picoCTF
-                        </Heading>
-                        <Text color="accent.400">featured competition</Text>
-                      </Flex>
-                      <Text color="sand.300" fontSize={{ base: 'md', md: 'lg' }} mb={6}>
-                        Carnegie Mellon&apos;s picoCTF is the cleanest place for
-                        new members to start competing, because every major skill
-                        lane appears in one ecosystem and the challenges reward
-                        real growth.
-                      </Text>
-                      <SimpleGrid columns={{ base: 1, sm: 2 }} spacing={3} color="sand.300">
-                        <Text>web exploitation</Text>
-                        <Text>cryptography</Text>
-                        <Text>reverse engineering</Text>
-                        <Text>forensics</Text>
-                        <Text>binary exploitation</Text>
-                        <Text>general skills</Text>
-                      </SimpleGrid>
-                    </Box>
+                  {/* this is the one card the user asked us to keep. */}
+                  <Image
+                    src="/pico.png"
+                    alt="picoCTF"
+                    objectFit="cover"
+                    h={{ base: '220px', md: '280px' }}
+                    w="full"
+                  />
+                  <Box p={{ base: 5, md: 6 }}>
+                    <Flex justify="space-between" gap={4} align="baseline" mb={4}>
+                      <Heading as="h2" fontSize={{ base: '3xl', md: '4xl' }}>
+                        picoCTF
+                      </Heading>
+                      <Text color="accent.400">featured competition</Text>
+                    </Flex>
+                    <Text color="sand.300" fontSize={{ base: 'md', md: 'lg' }} mb={6}>
+                      Carnegie Mellon&apos;s picoCTF is the cleanest place for
+                      new members to start competing, because every major skill
+                      lane appears in one ecosystem and the challenges reward
+                      real growth.
+                    </Text>
+                    <SimpleGrid columns={{ base: 1, sm: 2 }} spacing={3} color="sand.300">
+                      <Text>web exploitation</Text>
+                      <Text>cryptography</Text>
+                      <Text>reverse engineering</Text>
+                      <Text>forensics</Text>
+                      <Text>binary exploitation</Text>
+                      <Text>general skills</Text>
+                    </SimpleGrid>
                   </Box>
-                </motion.div>
+                </Box>
 
                 <Box>
                   <Heading as="h2" fontSize={{ base: '3xl', md: '5xl' }} mb={4}>
