@@ -1,82 +1,110 @@
 [
-    {
-        "name": "Manipulating URLs to access hidden files",
-        "category": "Web"
-    },
-    {
-        "name": "How to use cookies to spoof a website",
-        "category": "Web"
-    },
-    {
-        "name": "Cookies and local storage",
-        "category": "Web"
-    },
-    {
-        "name": "Cross site scripting",
-        "category": "Web"
-    },
-    {
-        "name": "Command injection",
-        "category": "Web"
-    },
-    {
-        "name": "SQL",
-        "category": "Web"
-    },
-    {
-        "name": "Web scraping",
-        "category": "Web"
-    },
-    {
-        "name": "JavaScript and PHP",
-        "category": "Web"
-    },
-    {
-        "name": "Encryption vs Encoding",
-        "category": "Cryptography"
-    },
-    {
-        "name": "Ciphers (substitution, caesar, ROT, arnold, atbash, etc)",
-        "category": "Cryptography"
-    },
-    {
-        "name": "Hashing and tools",
-        "category": "Cryptography"
-    },
-    {
-        "name": "ASCII, Hex, QR codes and barcodes, Morse Code, Base64/32, UTF-8",
-        "category": "Cryptography"
-    },
-    {
-        "name": "Terminal commands (cat, ls, whoami, cd, running programs, ssh, netcat, bash scripting)",
-        "category": "Linux"
-    },
-    {
-        "name": "Linux distributions and VMs",
-        "category": "Linux"
-    },
-    {
-        "name": "Binary (buffer overflows, bugs, memory)",
-        "category": "Linux"
-    },
-    {
-        "name": "Bash scripting",
-        "category": "Linux"
-    },
-    {
-        "name": "TCP & UDP",
-        "category": "Linux"
-    },
-    {
-        "name": "Python",
-        "category": "Tools"
-    },
-    {
-        "name": "Wireshark",
-        "category": "Tools"
-    },
-    {
-        "name": "Netcat",
-        "category": "Tools"
-    }
+  {
+    "name": "hidden routes, auth bypass, and session flaws",
+    "category": "Web"
+  },
+  {
+    "name": "cookies, local storage, JWTs, and OAuth basics",
+    "category": "Web"
+  },
+  {
+    "name": "cross-site scripting, sql injection, command injection, and SSRF",
+    "category": "Web"
+  },
+  {
+    "name": "api testing with javascript, php, and python tooling",
+    "category": "Web"
+  },
+  {
+    "name": "encoding vs encryption and when each matters",
+    "category": "Cryptography"
+  },
+  {
+    "name": "classical ciphers like caesar, rot, atbash, and substitution",
+    "category": "Cryptography"
+  },
+  {
+    "name": "hashes, signatures, key exchange, and common crypto mistakes",
+    "category": "Cryptography"
+  },
+  {
+    "name": "ascii, hex, base64, utf-8, qr codes, and steganography workflows",
+    "category": "Cryptography"
+  },
+  {
+    "name": "strings, symbols, and reading decompiled output",
+    "category": "Reverse Engineering"
+  },
+  {
+    "name": "ghidra basics and reverse engineering challenge habits",
+    "category": "Reverse Engineering"
+  },
+  {
+    "name": "python, android, and binary reversing patterns",
+    "category": "Reverse Engineering"
+  },
+  {
+    "name": "pcaps, disk artifacts, and memory snapshots",
+    "category": "Forensics"
+  },
+  {
+    "name": "metadata, logs, timelines, and traceable breadcrumbs",
+    "category": "Forensics"
+  },
+  {
+    "name": "osint pivots and fast evidence triage",
+    "category": "Forensics"
+  },
+  {
+    "name": "stack and heap basics, calling conventions, and memory layout",
+    "category": "Binary Exploitation"
+  },
+  {
+    "name": "buffer overflows, format strings, and unsafe input handling",
+    "category": "Binary Exploitation"
+  },
+  {
+    "name": "pwntools, gdb, and mitigation-aware challenge solving",
+    "category": "Binary Exploitation"
+  },
+  {
+    "name": "linux commands, ssh, netcat, bash scripting, and vim survival",
+    "category": "General Skills"
+  },
+  {
+    "name": "tcp, udp, sockets, ports, and packet flow intuition",
+    "category": "General Skills"
+  },
+  {
+    "name": "virtual machines, containers, and repeatable lab setup",
+    "category": "General Skills"
+  },
+  {
+    "name": "iam basics, role assumptions, and secret handling",
+    "category": "Cloud & Identity"
+  },
+  {
+    "name": "storage exposure, token leaks, and identity mistakes",
+    "category": "Cloud & Identity"
+  },
+  {
+    "name": "how cloud thinking shows up in modern web and infra challenges",
+    "category": "Cloud & Identity"
+  },
+  {
+    "name": "python",
+    "category": "Tools"
+  },
+  {
+    "name": "wireshark",
+    "category": "Tools"
+  },
+  {
+    "name": "netcat",
+    "category": "Tools"
+  },
+  {
+    "name": "ghidra",
+    "category": "Tools"
+  }
 ]

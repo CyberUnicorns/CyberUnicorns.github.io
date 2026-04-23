@@ -1,31 +1,27 @@
-import {
-  Box,
-  Heading,
-  Container,
-  SimpleGrid,
-  Text,
-  Link,
-} from "@chakra-ui/react";
-import { Numbered } from "./Numbered";
-import { UnicornBullet } from "./UnicornBullet";
+import { Box, Heading, Container, SimpleGrid, Text, Link } from '@chakra-ui/react'
+import { Numbered } from './Numbered'
+import { UnicornBullet } from './UnicornBullet'
 
+// this keeps the join section close to the original split layout.
 export function Join() {
   return (
     <Box bg="gray.100">
       <Container maxW="container.xl" pt="4">
         <Heading
           as="h1"
-          fontSize={{ base: "2xl", md: "3xl", lg: "5xl" }}
+          fontSize={{ base: '2xl', md: '3xl', lg: '5xl' }}
           color="blue.700"
           fontWeight="bolder"
           textAlign="center"
         >
-          Join Us
+          How to Join
         </Heading>
-        <SimpleGrid columns={{ base: 1, lg: 2 }}>
+
+        <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={8}>
           <Box
             bg="white"
-            px="3"
+            px="4"
+            py="6"
             boxShadow="xl"
             rounded="md"
             maxW="700px"
@@ -34,54 +30,58 @@ export function Join() {
             d="flex"
             alignItems="center"
           >
-            <Box maxW="420px">
+            <Box maxW="520px" mx="auto">
               <UnicornBullet text="All experience levels welcome" />
-              <UnicornBullet text="Gain leadership positions" />
-              <UnicornBullet text="Win Scholarships" />
-              <UnicornBullet text="Learn about programming, hacking, and cryptography" />
-              <UnicornBullet text="Solve capture-the-flag challenges" />
+              <UnicornBullet text="Weekly optional meetings and hands-on projects" />
+              <UnicornBullet text="Build connections in industry" />
+              <UnicornBullet text="Leadership opportunities for members who show initiative" />
+              <UnicornBullet text="Train for and compete in CTFs like picoCTF" />
             </Box>
           </Box>
+
           <Box
             align="center"
             bg="white"
             p={8}
             boxShadow="xl"
             rounded="md"
-            maxW="500px"
+            maxW="560px"
             mx="auto"
             mt="4"
           >
             <Numbered number="1">
-              Fill out the{" "}
+              Join the{' '}
+              <Link href="https://discord.gg/R67SaG78Ad" color="blue.300" isExternal>
+                Discord
+              </Link>
+            </Numbered>
+
+            <Numbered number="2">
+              Fill out the{' '}
               <Link
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdbwMFp5wgEvTBW75CwoPy9aCblNMQQsjjVm6yzGxV9WfXbUg/viewform?usp=sf_link"
                 color="blue.300"
                 isExternal
               >
-                member information form
-              </Link>
+                interest form
+              </Link>{' '}
+              and follow the Instagram
             </Numbered>
-            <Numbered number="2">Come to one of our meetings!</Numbered>
-            <Numbered number="3">
-              Join our{" "}
-              <Link
-                href="https://www.facebook.com/groups/1331698317252357/"
-                color="blue.300"
-                isExternal
-              >
-                Facebook Group
-              </Link>
-            </Numbered>
-            <Text fontWeight="bold" fontSize="3xl" color="orange.400">
-              Thursdays @ 8:40 - 9:20 PM
+
+            <Numbered number="3">Come to the first meeting or interest session</Numbered>
+
+            <Text fontWeight="bold" fontSize="2xl" color="orange.400" mt={4}>
+              Details will be posted on the website
             </Text>
-            <Text fontWeight="bold" fontSize="3xl" color="blue.700">
-              Room: Engineering Suite
+            <Text fontWeight="bold" fontSize="xl" color="blue.700" mt={2}>
+              Discord will have updates too
+            </Text>
+            <Text color="gray.500" mt={4}>
+              If you want leadership, say so in the form or introduce yourself in Discord.
             </Text>
           </Box>
         </SimpleGrid>
       </Container>
     </Box>
-  );
+  )
 }

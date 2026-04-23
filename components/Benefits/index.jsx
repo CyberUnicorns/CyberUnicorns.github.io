@@ -7,147 +7,172 @@ import {
   Text,
   UnorderedList,
   ListItem,
-} from "@chakra-ui/react";
-import { Card } from "./Card";
+} from '@chakra-ui/react'
+import { Card } from './Card'
 
+// these lists keep the new recruiting copy tidy inside the old layout.
+const whatWeDo = [
+  'weekly optional meetings',
+  'learn cyber with hands-on projects',
+  'build connections in industry',
+  'train for and compete in CTFs like picoCTF (and win)',
+]
+
+const pathways = [
+  {
+    title: 'Nonprofit',
+    text: 'Community cyber education, secure web help for mission-driven groups, and outreach projects that do real public good.',
+  },
+  {
+    title: 'Public Sector',
+    text: 'A direct opportunity to work with the National Coast Guard and other partner organizations that want student initiative.',
+  },
+  {
+    title: 'Industry',
+    text: 'Connections with security professionals, companies, and practical team experience that helps members build real momentum.',
+  },
+]
+
+const competitionFlow = [
+  'picoCTF categories like web, crypto, reversing, forensics, binary exploitation, and general skills',
+  'Other team competitions and open events as members level up',
+  'Real tooling with Linux, Python, Wireshark, netcat, and challenge workflows',
+]
+
+// this section keeps the old clean boxes but replaces the outdated content.
 export function Benefits() {
   return (
     <Box bg="gray.100" p={4} color="gray.800" pt="6">
       <Container maxW="container.xl">
+        <Heading
+          as="h1"
+          fontSize={{ base: '2xl', md: '3xl', lg: '5xl' }}
+          color="blue.700"
+          fontWeight="bolder"
+          textAlign="center"
+          mb="6"
+        >
+          What We Do
+        </Heading>
+
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-          <Box>
-            <Heading
-              as="h1"
-              fontSize={{ base: "2xl", md: "3xl", lg: "5xl" }}
-              color="blue.700"
-              fontWeight="bolder"
-              textAlign="center"
-            >
-              Our Activities
-            </Heading>
-            <Box
-              maxW="700px"
-              mx="auto"
-              p={4}
-              boxShadow="lg"
-              bg="white"
-              rounded="lg"
-              mb="8"
-            >
-              <Text>
-                CyberUnicorns is a student-led club at NCSSM dedicated to
-                cybersecurity and it&apos;s opportunities. CyberUnicorns strives
-                to engage the NCSSM community with cybersecurity through
-                education, capture the flag challenges, possible scholarships.
-                By teaching others about cybersecurity, we hope to inform them
-                about the various tactics of hackers and how they can keep their
-                own websites and even themselves safe. Scroll down to join us!
-              </Text>
+          <Box maxW="700px" mx="auto" p={5} boxShadow="lg" bg="white" rounded="lg">
+            <Text fontSize="lg" fontWeight="bold" color="blue.700">
+              Hi @everyone! want to learn cybersecurity AND actually use it?
+            </Text>
+            <Text mt={4}>
+              CyberUnicorns is NCSSM Durham&apos;s official cybersecurity club, and we&apos;re
+              recruiting members for this year.
+            </Text>
 
-              <Text fontWeight="bold" mt={4}>
-                Here are some of our recent activities!
-              </Text>
+            <Text fontWeight="bold" mt={4}>
+              What we do
+            </Text>
 
-              <UnorderedList>
-                <ListItem>
-                  <Link
-                    href="https://github.com/CyberUnicorns/Intro-CTF-Challenges-2023"
-                    color="blue.300"
-                    isExternal
-                  >
-                    Intro to CTF challenges 2023 (8 challenges)
-                  </Link>
-                </ListItem>
+            <UnorderedList spacing={2} mt={2}>
+              {whatWeDo.map((item) => (
+                <ListItem key={item}>{item}</ListItem>
+              ))}
+            </UnorderedList>
 
-                <ListItem>
-                  <Link
-                    href="https://github.com/CyberUnicorns/Intro-CTF-Challenges"
-                    color="blue.300"
-                    isExternal
-                  >
-                    Intro to CTF challenges 2022 (5 challenges)
-                  </Link>
-                </ListItem>
-
-                <ListItem>
-                  <Link
-                    href="https://github.com/CyberUnicorns/Curriculum"
-                    color="blue.300"
-                    isExternal
-                  >
-                    CyberUnicorns Curriculum!
-                  </Link>
-                </ListItem>
-              </UnorderedList>
-            </Box>
+            <Text fontWeight="bold" mt={4}>
+              Looking for leadership!
+            </Text>
+            <Text mt={2}>
+              If you show initiative, you&apos;re welcome even if you&apos;re new to
+              cybersecurity.
+            </Text>
           </Box>
 
-          <Box textAlign="center">
-            <Heading
-              as="h1"
-              fontSize={{ base: "2xl", md: "3xl", lg: "5xl" }}
-              color="blue.700"
-              fontWeight="bolder"
-              textAlign="center"
-            >
-              Our Calendar
+          <Box maxW="700px" mx="auto" p={5} boxShadow="lg" bg="white" rounded="lg">
+            <Heading as="h2" size="lg" color="blue.700">
+              Big Opportunity
             </Heading>
+            <Text mt={4}>
+              We have a direct opportunity to work with the National Coast Guard and other
+              organizations and companies, so members can do more than just study challenge
+              writeups.
+            </Text>
 
-            <Box d="flex" justifyContent="center">
-              <iframe
-                src="https://calendar.google.com/calendar/embed?src=c_7d2724885598c2ae7e4cdd1353c7091e5476d093344b26ceaa259ba40ef78189%40group.calendar.google.com&ctz=America%2FNew_York&mode=AGENDA"
-                width="800"
-                height="400"
-                frameBorder="0"
-                scrolling="no"
-              ></iframe>
-            </Box>
+            <Text fontWeight="bold" mt={4}>
+              Competition focus
+            </Text>
+            <UnorderedList spacing={2} mt={2}>
+              {competitionFlow.map((item) => (
+                <ListItem key={item}>{item}</ListItem>
+              ))}
+            </UnorderedList>
+
+            <Text fontWeight="bold" mt={4}>
+              Join pathway
+            </Text>
+            <Text mt={2}>
+              Join the Discord, check the interest form, and come to the first meeting or
+              interest session once details are posted.
+            </Text>
           </Box>
         </SimpleGrid>
 
-        <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing="30px" mt="4">
-          <Card
-            title="Learn Cybersecurity"
-            logo="https://www.pngall.com/wp-content/uploads/4/Cyber-Security-PNG-Clipart.png"
-          >
-            Cybersecurity is one of the fastest growing career paths in the
-            world. With techniques through programming, web exploitation, linux
-            tools, and cryptography, there&apos;s so much to learn about this
-            fascinating topic!
-          </Card>
-          <Card
-            title="CyberStart America"
-            logo="https://d33wubrfki0l68.cloudfront.net/2354660573da025dc539425c1a7ce325b437524e/fc06b/images/csa-web-product-02.png"
-          >
-            A capture the flag compeition that students from across the United
-            States compete in. CyberStart America is the most enjoyable way to
-            discover your talent, advance your skills and win scholarships in
-            cybersecurity! Click{" "}
-            <Link
-              href="https://www.cyberstartamerica.org/"
-              color="blue.400"
-              isExternal
-            >
-              here
-            </Link>{" "}
-            to learn more.
-          </Card>
+        <Heading
+          as="h1"
+          fontSize={{ base: '2xl', md: '3xl', lg: '5xl' }}
+          color="blue.700"
+          fontWeight="bolder"
+          textAlign="center"
+          mt="10"
+        >
+          Club Pathways
+        </Heading>
+
+        <SimpleGrid columns={{ base: 1, md: 3 }} spacing="30px" mt="4">
+          {pathways.map((pathway) => (
+            <Box key={pathway.title} bg="white" p={5} boxShadow="lg" rounded="lg">
+              <Text fontSize="2xl" fontWeight="bold" color="blue.700" align="center">
+                {pathway.title}
+              </Text>
+              <Text lineHeight="1.6rem" color="gray.700" mt={4}>
+                {pathway.text}
+              </Text>
+            </Box>
+          ))}
+        </SimpleGrid>
+
+        <Heading
+          as="h1"
+          fontSize={{ base: '2xl', md: '3xl', lg: '5xl' }}
+          color="blue.700"
+          fontWeight="bolder"
+          textAlign="center"
+          mt="10"
+        >
+          Competition Layout
+        </Heading>
+
+        <SimpleGrid columns={{ base: 1, lg: 2 }} spacing="30px" mt="4">
           <Card title="picoCTF" logo="/pico.png">
-            Developed by Carnegie Mellon, picoCTF is a capture the flag
-            cybersecurity game for high school students. Join CyberUnicorns as
-            we tackle various problems from this competition!
+            Developed by Carnegie Mellon, picoCTF is the main competition we use to train new
+            members across web, crypto, reversing, forensics, binary exploitation, and general
+            skills.
           </Card>
-          <Card
-            title="Scholarships"
-            logo="https://d33wubrfki0l68.cloudfront.net/2a411dd613ce138af90cb6ccacaa2a34a1b8df59/3f54b/images/csa-web-badge-ncsf.png"
-          >
-            With CyberUnicorns, you can win scholarships from The National Cyber
-            Scholarship Foundation. With award levels for Semifinalist,
-            Finalist, National Cyber Scholar, and National Cyber Scholar with
-            honors, it&apos;s not too difficult to boost your college resume!{" "}
-          </Card>
+
+          <Box bg="white" p={5} boxShadow="lg" rounded="lg">
+            <Text fontSize="2xl" fontWeight="bold" align="center" color="blue.700">
+              What members build toward
+            </Text>
+            <UnorderedList spacing={3} mt={4} color="gray.700">
+              <ListItem>Hands-on solves, writeups, and challenge workflows</ListItem>
+              <ListItem>Team practice for broader competitions after picoCTF</ListItem>
+              <ListItem>Technical confidence with modern cyber tools and concepts</ListItem>
+              <ListItem>
+                More club material on the{' '}
+                <Link href="https://github.com/CyberUnicorns/Curriculum" color="blue.400" isExternal>
+                  CyberUnicorns curriculum
+                </Link>
+              </ListItem>
+            </UnorderedList>
+          </Box>
         </SimpleGrid>
       </Container>
     </Box>
-  );
+  )
 }
