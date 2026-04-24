@@ -4,7 +4,7 @@ import { Box, Img, Heading, Container, Grid, GridItem, Text, Button, Link, Stack
 const joinLinks = {
   discord: 'https://discord.gg/R67SaG78Ad',
   interestForm:
-    'https://docs.google.com/forms/d/e/1FAIpQLSdbwMFp5wgEvTBW75CwoPy9aCblNMQQsjjVm6yzGxV9WfXbUg/viewform?usp=sf_link',
+    'https://docs.google.com/forms/d/e/1FAIpQLSezdZrJK939zlVGsvFhBark3VsP5kXc4KrLT-2yJc2T9PveQg/viewform?usp=sharing&ouid=118136963325335320825',
 }
 
 // this keeps the old hero but swaps in the new recruiting message.

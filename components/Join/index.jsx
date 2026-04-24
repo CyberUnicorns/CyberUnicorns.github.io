@@ -59,7 +59,7 @@ export function Join() {
             <Numbered number="2">
               Fill out the{' '}
               <Link
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdbwMFp5wgEvTBW75CwoPy9aCblNMQQsjjVm6yzGxV9WfXbUg/viewform?usp=sf_link"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSezdZrJK939zlVGsvFhBark3VsP5kXc4KrLT-2yJc2T9PveQg/viewform?usp=sharing&ouid=118136963325335320825"
                 color="blue.300"
                 isExternal
               >
